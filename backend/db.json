@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "name": "Blusa M",
+      "price": "59.98",
+      "id": 6
+    },
+    {
+      "name": "Calça G",
+      "price": "39.89",
+      "id": 7
+    },
+    {
+      "name": "Regata p",
+      "price": "20.35",
+      "id": 8
+    },
+    {
+      "name": "Calça cargo GG",
+      "price": "45.90",
+      "id": 9
+    }
+  ]
+}
