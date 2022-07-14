@@ -3,7 +3,7 @@
         Cadastro Novo Cliente
         <form>
             <mat-form-field>
-                <input matInput placeholder="Nome" [(ngModel)] = "product.nome" name="nome">
+                <input matInput placeholder="Nome" [(ngModel)] = "product.nome" name="nome" class="teste">
             </mat-form-field>
             <mat-form-field>
                 <input matInput placeholder="Rua"[(ngModel)] = "product.rua" name="rua">
@@ -14,8 +14,8 @@
             <mat-form-field>
                 <input matInput placeholder="Complemento"[(ngModel)] = "product.complemento" name="complemento">
             </mat-form-field>
-            <mat-form-field>
-                <input matInput placeholder="Telefone" [(ngModel)] = "product.telefone" name="telfone">
+            <mat-form-field class="example-form-field">
+                <input type="texte" matInput placeholder="Telefone" [(ngModel)] = "product.telefone" name="telfone">
             </mat-form-field>
         </form>
 

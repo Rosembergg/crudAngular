@@ -12,3 +12,13 @@
 .home{
     background-color: #dcdcdc;
 }
+
+p{
+    font-size: 1.2rem;
+}
+.exBtn {
+    background-color: #8897ec;
+    color: black;
+    margin-left: 11rem;
+    margin-top: -10px;
+}

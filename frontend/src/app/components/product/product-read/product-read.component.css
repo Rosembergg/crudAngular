@@ -4,11 +4,13 @@ table {
 }
 td{
     color: black;
-    justify-content: center;
+    font-size: medium;
+
 }
 th{
     color:  black;
-    justify-content: center;
+    font-size: medium;
+   
 }
 
 .edit{
@@ -22,4 +24,6 @@ th{
 .delete > i {
     color: brown;
 }
-
+div{
+    background-color:  black;
+}

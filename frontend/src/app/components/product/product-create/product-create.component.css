@@ -15,10 +15,14 @@ form{
 
 
 .card{
-    background-color: #e8c2b9;
+    background-color: #8897ec;
     color: black;
 }
 
 button{
     margin:5px 15px 0px 0px;
 }
+
+.example-form-field {
+    color: black;
+  }
