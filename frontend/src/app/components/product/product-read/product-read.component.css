@@ -1,12 +1,14 @@
 table {
     width: 100%;
-    background-color: #e6e0df;
+    background-color: #8897ec;
 }
 td{
     color: black;
+    justify-content: center;
 }
 th{
     color:  black;
+    justify-content: center;
 }
 
 .edit{
@@ -20,3 +22,4 @@ th{
 .delete > i {
     color: brown;
 }
+

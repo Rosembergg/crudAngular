@@ -1,5 +1,8 @@
 export interface Product {
     id?: number
-    name: string
-    price?: number
+    nome: string
+    rua: string
+    bairro: string
+    complemento: string
+    telefone: string
 }
