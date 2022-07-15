@@ -1,9 +1,9 @@
 .cancelar{
-    background-color: rgb(153, 153, 150);
+    background-color: rgb(179, 43, 43);
     color: black;
 }
 .salvar{
-    background-color: green;
+    background-color: #8897ec;
 }
 
 form{
@@ -13,12 +13,6 @@ form{
 
 }
 
-
-.card{
-    background-color: #8897ec;
-    color: black;
-}
-
 button{
     margin:5px 15px 0px 0px;
 }
@@ -26,3 +20,6 @@ button{
 .example-form-field {
     color: black;
   }
+
+/*   color 
+  background-color: #8897ec; */

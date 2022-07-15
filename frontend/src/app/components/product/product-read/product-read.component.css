@@ -1,14 +1,12 @@
 table {
     width: 100%;
-    background-color: #8897ec;
+    
 }
 td{
-    color: black;
     font-size: medium;
 
 }
 th{
-    color:  black;
     font-size: medium;
    
 }
@@ -23,7 +21,4 @@ th{
 
 .delete > i {
     color: brown;
-}
-div{
-    background-color:  black;
 }

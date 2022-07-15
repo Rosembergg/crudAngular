@@ -1,30 +1,41 @@
-<mat-card class="card">
-    <mat-card-title>
-        Cadastro Novo Cliente
-        <form>
-            <mat-form-field>
-                <input matInput placeholder="Nome" [(ngModel)] = "product.nome" name="nome" class="teste">
-            </mat-form-field>
-            <mat-form-field>
-                <input matInput placeholder="Rua"[(ngModel)] = "product.rua" name="rua">
-            </mat-form-field>
-            <mat-form-field>
-                <input matInput placeholder="Bairro" [(ngModel)] = "product.bairro" name="bairro">
-            </mat-form-field>
-            <mat-form-field>
-                <input matInput placeholder="Complemento"[(ngModel)] = "product.complemento" name="complemento">
-            </mat-form-field>
-            <mat-form-field class="example-form-field">
-                <input type="texte" matInput placeholder="Telefone" [(ngModel)] = "product.telefone" name="telfone">
-            </mat-form-field>
-        </form>
-
-        <button class="salvar" mat-raised-button (click)="createProduct()" color="primary">
+<div class="animated fadein">
+    <div class="card">
+        <div class="card-header">
+        <label class="teste">Cadastro de Cliente</label> 
+        </div>
+        <div class="card-body">
+            <form id="formFiltro">
+                <div class="form-row">
+                        <label>&nbsp;Nome</label>
+                        <input type="text" class="form-control" placeholder="Nome" [(ngModel)]="product.nome" name="nome">
+                        <br>
+                        <label>&nbsp;Rua</label>
+                        <input type="text" class="form-control" placeholder="Rua" [(ngModel)]="product.rua" name="rua">
+                        <br>
+                        <label>&nbsp;Bairro</label>
+                        <input type="text" class="form-control" placeholder="Bairro" [(ngModel)]="product.bairro" name="bairro">
+                        <br>
+                        <label>&nbsp;Complemento</label>
+                        <input type="text" class="form-control" placeholder="Complemento" [(ngModel)]="product.complemento" name="complemento">
+                         <br>
+                        <label>&nbsp;Telefone</label>
+                        <input type="tel" class="form-control" placeholder="Telefone" [(ngModel)]="product.telefone" name="telefone">
+                </div>
+            </form>
+        </div>
+        <div class="card-footer">
+            <button
+            type="button"
+            class="salvar"
+            mat-raised-button
+            (click)="createProduct()"
+            color="primary"
+          >
             Salvar
-        </button>
-
-        <button class="cancelar" mat-raised-button (click)="cancel()">
+          </button>
+          <button class="cancelar" mat-raised-button (click)="cancel()">
             Cancelar
-        </button>
-    </mat-card-title>
-</mat-card>
+          </button>
+        </div>
+    </div>
+</div>
