@@ -1,4 +1,4 @@
-.sidenav{
+/* .sidenav {
     background-color: #d8e6ed;
     width: 9rem;
 }
@@ -13,8 +13,41 @@
     background-color: #d8e6ed;
 }
 
-.content{
+.content {
     background-color: #fff;
     color: black;
     padding: 16px;
+} */
+
+.sidenav {
+    background-color: #d8e6ed;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
+
+.header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.header .logo {
+    max-height: 130px;
+}
+
+.header .title-group {
+    padding-left: 25px;
+    color: black;
+}
+
+.header .title-group i {
+    padding-right: 5px;
+}
+
+.material-icons {
+    color: black;
+}
+
+/*cor da letra #cea974*/

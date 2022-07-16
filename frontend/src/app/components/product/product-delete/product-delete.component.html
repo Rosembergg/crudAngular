@@ -1,66 +1,42 @@
-<mat-card class="card">
-  <mat-card-title>
-    Deletar Produto!
-    <form>
-      <mat-form-field>
-        <input
-          matInput
-          placeholder="Nome"
-          [value]="product.nome"
-          name="nome"
-          disabled
-        />
-      </mat-form-field>
+<div class="animated fadein">
+  <div class="card">
+    <div class="card-header">
+      <label>Deletar Cliente</label>
+    </div>
+    <div class="card-body">
+      <form id="formFiltro">
+        <div class="form-row">
+          <label>&nbsp;Nome</label>
+          <input type="text" class="form-control" placeholder="Nome" [value]="product.nome" name="nome" disabled>
+          <br>
+          <label>&nbsp;CEP</label>
+          <input type="text" class="form-control" placeholder="CEP" [value]="product.cep" name="cep" disabled>
+          <br>
+          <label>&nbsp;Rua</label>
+          <input type="text" class="form-control" placeholder="Rua" [value]="product.rua" name="rua" disabled>
+          <br>
+          <label>&nbsp;Bairro</label>
+          <input type="text" class="form-control" placeholder="Bairro" [value]="product.bairro" name="bairro" disabled>
+          <br>
+          <label>&nbsp;Complemento</label>
+          <input type="text" class="form-control" placeholder="Complemento" [value]="product.complemento"
+            name="complemento" disabled>
+          <br>
+          <label>&nbsp;Telefone</label>
+          <input type="text" class="form-control" placeholder="Telefone" [value]="product.telefone" name="telefone"
+            disabled>
+          <br>
+        </div>
+      </form>
+    </div>
+    <div class="card-footer">
+      <button class="salvar" mat-raised-button (click)="deleteProduct()" color="warn">
+        Excluir
+      </button>
 
-      <mat-form-field>
-        <input
-          matInput
-          placeholder="Rua"
-          [value]="product.rua"
-          name="rua"
-          disabled
-        />
-      </mat-form-field>
-      <mat-form-field>
-        <input
-          matInput
-          placeholder="Bairro"
-          [value]="product.bairro"
-          name="bairro"
-          disabled
-        />
-      </mat-form-field>
-      <mat-form-field>
-        <input
-          matInput
-          placeholder="Complemento"
-          [value]="product.complemento"
-          name="complemento"
-          disabled
-        />
-      </mat-form-field>
-      <mat-form-field>
-        <input
-          matInput
-          placeholder="Telefone"
-          [value]="product.telefone"
-          name="telefone"
-          disabled
-        />
-      </mat-form-field>
-    </form>
-
-    <button
-      class="salvar"
-      mat-raised-button
-      (click)="deleteProduct()"
-      color="warn"
-    >
-      Excluir
-    </button>
-
-    <button class="cancelar" mat-raised-button (click)="cancel()">
-      Cancelar
-    </button>
-  </mat-card-title>
-</mat-card>
+      <button class="cancelar" mat-raised-button (click)="cancel()">
+        Cancelar
+      </button>
+    </div>
+  </div>
+</div>

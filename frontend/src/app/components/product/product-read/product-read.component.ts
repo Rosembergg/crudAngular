@@ -12,6 +12,7 @@ export class ProductReadComponent implements OnInit {
   displayedColumns = [
     "id",
     "nome",
+    "cep",
     "rua",
     "bairro",
     "complemento",
@@ -19,7 +20,7 @@ export class ProductReadComponent implements OnInit {
     "action",
   ];
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
     this.productService.read().subscribe((products) => {

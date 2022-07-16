@@ -9,7 +9,7 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: Product[] = [
-  { id: 1, nome: 'Hydrogen', rua: '9.99', bairro: 'doles', complemento: 'dales', telefone: '1234' },
+  { id: 1, nome: 'Hydrogen', cep: 'teste', rua: '9.99', bairro: 'doles', complemento: 'dales', telefone: '1234' },
 ];
 
 /**
@@ -72,7 +72,7 @@ export class ProductRead2DataSource extends DataSource<Product> {
       return data;
     }
 
-    return data.sort(( a, b) => {
+    return data.sort((a, b) => {
       const isAsc = this.sort?.direction === 'asc';
       switch (this.sort?.active) {
         case 'name': return compare(a.nome, b.nome, isAsc);

@@ -1,25 +1,22 @@
-.cancelar{
+.cancelar {
     background-color: rgb(179, 43, 43);
     color: black;
 }
-.salvar{
+
+.salvar {
     background-color: #8897ec;
 }
 
-form{
+form {
     margin: 10px 0px 10px 0px;
     display: flex;
     flex-direction: column;
 
 }
 
-button{
-    margin:5px 15px 0px 0px;
+button {
+    margin: 5px 15px 0px 0px;
 }
-
-.example-form-field {
-    color: black;
-  }
 
 /*   color 
   background-color: #8897ec; */

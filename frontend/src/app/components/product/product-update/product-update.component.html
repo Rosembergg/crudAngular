@@ -1,55 +1,40 @@
-<mat-card class="card">
-  <mat-card-title>
-    Alterar Produto
-    <form>
-      <mat-form-field>
-        <input
-          matInput
-          placeholder="Nome"
-          [(ngModel)]="product.nome"
-          name="nome"
-        />
-      </mat-form-field>
-      <mat-form-field>
-        <input
-          matInput
-          placeholder="Rua"
-          [(ngModel)]="product.rua"
-          name="rua"
-        />
-      </mat-form-field>
-      <mat-form-field>
-        <input
-          matInput
-          placeholder="Bairro"
-          [(ngModel)]="product.bairro"
-          name="bairro"
-        />
-      </mat-form-field>
-      <mat-form-field>
-        <input
-          matInput
-          placeholder="Complemento"
-          [(ngModel)]="product.complemento"
-          name="complemento"
-        />
-      </mat-form-field>
-      <mat-form-field>
-        <input
-          matInput
-          placeholder="Telefone"
-          [(ngModel)]="product.telefone"
-          name="telefone"
-        />
-      </mat-form-field>
-    </form>
-
-    <button class="salvar" mat-raised-button (click)="updateProduct()">
-      Atualizar
-    </button>
-
-    <button class="cancelar" mat-raised-button (click)="cancel()">
-      Cancelar
-    </button>
-  </mat-card-title>
-</mat-card>
+<div class="animated fadein">
+  <div class="card">
+    <div class="card-header">
+      <label>Editar Cliente</label>
+    </div>
+    <div class="card-body">
+      <form id="formFiltro">
+        <div class="form-row">
+          <label>&nbsp;Nome</label>
+          <input type="text" class="form-control" placeholder="Nome" [(ngModel)]="product.nome" name="nome">
+          <br>
+          <label>&nbsp;CEP</label>
+          <input type="text" class="form-control" placeholder="CEP" [(ngModel)]="product.cep" name="cep">
+          <br>
+          <label>&nbsp;Rua</label>
+          <input type="text" class="form-control" placeholder="Rua" [(ngModel)]="product.rua" name="rua">
+          <br>
+          <label>&nbsp;Nome</label>
+          <input type="text" class="form-control" placeholder="Bairro" [(ngModel)]="product.bairro" name="bairro">
+          <br>
+          <label>&nbsp;Nome</label>
+          <input type="text" class="form-control" placeholder="Complemento" [(ngModel)]="product.complemento"
+            name="complemento">
+          <br>
+          <label>&nbsp;Nome</label>
+          <input type="text" class="form-control" placeholder="Telefone" [(ngModel)]="product.telefone" name="telefone">
+          <br>
+        </div>
+      </form>
+    </div>
+    <div class="card-footer">
+      <button class="salvar" mat-raised-button (click)="updateProduct()">
+        Atualizar
+      </button>
+      <button class="cancelar" mat-raised-button (click)="cancel()">
+        Cancelar
+      </button>
+    </div>
+  </div>
+</div>

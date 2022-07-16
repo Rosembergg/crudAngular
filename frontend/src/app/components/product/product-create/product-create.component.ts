@@ -11,15 +11,16 @@ import { Component, OnInit } from "@angular/core";
 export class ProductCreateComponent implements OnInit {
   product: Product = {
     nome: "",
+    cep: "",
     rua: "",
     bairro: "",
     complemento: "",
     telefone: "",
   };
 
-  constructor(private productService: ProductService, private router: Router) {}
+  constructor(private productService: ProductService, private router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   createProduct(): void {
     this.productService.create(this.product).subscribe(() => {

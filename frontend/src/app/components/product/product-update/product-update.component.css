@@ -1,22 +1,18 @@
-form{
+form {
     margin: 10px 0px 10px 0px;
     display: flex;
     flex-direction: column;
-}   
-
-button{
-    margin:5px 15px 0px 0px;
 }
 
-.cancelar{
-    background-color: rgb(153, 153, 150);
+button {
+    margin: 5px 15px 0px 0px;
+}
+
+.cancelar {
+    background-color: rgb(179, 43, 43);
     color: black;
 }
-.salvar{
-    background-color: green;
-}
 
-.card{
+.salvar {
     background-color: #8897ec;
-    color: black;
 }
