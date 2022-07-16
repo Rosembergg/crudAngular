@@ -50,8 +50,8 @@ export class ProductService {
     return this.http.put<Product>(url, product)
   }
 
-  delete(id: number): Observable <Product>{
+  delete(id: number): Observable <boolean>{
     const url = `${this.baseUrl}/${id}`
-    return this.http.delete<Product>(url)
+    return this.http.delete<boolean>(url)
   }
 }     
