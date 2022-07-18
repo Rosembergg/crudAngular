@@ -18,9 +18,14 @@ export class ProductCreateComponent implements OnInit {
     telefone: "",
   };
 
-  constructor(private productService: ProductService, private router: Router) { }
+  constructor(
+    private productService: ProductService, 
+    private router: Router,
+    ) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+  
+  }
 
   createProduct(): void {
     this.productService.create(this.product).subscribe(() => {
@@ -32,4 +37,5 @@ export class ProductCreateComponent implements OnInit {
   cancel(): void {
     this.router.navigate(["/products"]);
   }
+
 }

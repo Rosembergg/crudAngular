@@ -1,17 +1,36 @@
-<mat-toolbar class="header mat-elevation-z4">
+<div class="animated fadein">
+  <mat-toolbar class="header mat-elevation-z4">
     <span>
-        <a routerLink="/">
-            <img class="logo" src="assets/img/istockphoto-1205449798-170667a-removebg-preview.png" alt="logo">
-        </a>
+      <a routerLink="/">
+        <img
+          class="logo"
+          src="assets/img/istockphoto-1205449798-170667a-removebg-preview.png"
+          alt="logo"
+        />
+      </a>
     </span>
 
     <span class="title-group">
-        <a routerLink="{{routerUrl}}">
-            <i class="material-icons">
-                {{ icon }}
-            </i>
-            {{ title }}
-        </a>
+      <a routerLink="{{ routerUrl }}">
+        <i class="material-icons">
+          {{ icon }}
+        </i>
+        {{ title }}
+      </a>
     </span>
-
-</mat-toolbar>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-light">
+        <a routerLink="/">
+          <i class="material-icons"> home </i>
+          Início
+        </a>
+      </button>
+      <button type="button" class="btn btn-light">
+        <a routerLink="/products">
+          <i class="material-icons"> person </i>
+          Cadastro Cliente
+        </a>
+      </button>
+    </div>
+  </mat-toolbar>
+</div>
