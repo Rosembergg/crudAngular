@@ -1,20 +1,24 @@
 'use-strict';
 
-const clientRepository = require('../../shared/repositories/client')
+import { ClientRepository } from '../../shared/repositories/client.js'
 
-exports.get = async (req, res) => {
+export class FindClientController {
+  async handle(req, res) {
 
-  try {
+    try {
 
-    const clientID = req.params.id
+      const clientRepository = new ClientRepository()
 
-    const client = await clientRepository.findByID(clientID)
+      const clientID = req.params.id
 
-    if (!client) return res.status(404).json({ message: `Este cliente não existe.` })
+      const client = await clientRepository.findByID(clientID)
 
-    return res.json(client)
+      if (!client) return res.status(404).json({ message: `Este cliente não existe.` })
 
-  } catch (err) {
+      return res.json(client)
 
+    } catch (err) {
+
+    }
   }
 }

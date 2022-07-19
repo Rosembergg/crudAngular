@@ -1,20 +1,26 @@
 'use-strict';
 
-const clientRepository = require('../../shared/repositories/client')
+import { ClientRepository } from '../../shared/repositories/client.js'
 
-exports.delete = async (req, res) => {
-  try {
-    const clientID = req.params.id
+export class DeleteClientController {
 
-    const client = await clientRepository.findByID(clientID)
+  async handle(req, res) {
+    try {
 
-    if (!client) return res.status(404).json({ message: `Este cliente não existe.` })
+      const clientRepository = new ClientRepository()
 
-    await clientRepository.deleteByID(clientID)
+      const clientID = req.params.id
 
-    return res.status(204)
+      const client = await clientRepository.findByID(clientID)
 
-  } catch (err) {
+      if (!client) return res.status(404).json({ message: `Este cliente não existe.` })
 
+      await clientRepository.deleteByID(clientID)
+
+      return res.status(204)
+
+    } catch (err) {
+
+    }
   }
 }

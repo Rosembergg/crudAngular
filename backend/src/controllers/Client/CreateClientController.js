@@ -1,24 +1,28 @@
 'use-strict';
 
-const clientRepository = require('../../shared/repositories/client')
+import { ClientRepository } from '../../shared/repositories/client.js'
 
-exports.post = async (req, res) => {
-  try {
+export class CreateClientController {
+  async handle(req, res) {
+    try {
 
-    const { nome, rua, bairro, complemento, telefone, cep  } = req.body
+      const clientRepository = new ClientRepository()
 
-    const client = await clientRepository.create({
-      nome,
-      rua,
-      bairro,
-      complemento,
-      telefone,
-      cep
-    })
+      const { nome, rua, bairro, complemento, telefone, cep } = req.body
 
-    return res.json(client)
+      const client = await clientRepository.create({
+        nome,
+        rua,
+        bairro,
+        complemento,
+        telefone,
+        cep
+      })
 
-  } catch (err) {
-    console.log(err)
+      return res.json(client)
+
+    } catch (err) {
+      console.log(err)
+    }
   }
 }

@@ -1,22 +1,27 @@
 'use-strict';
 
-const clientRepository = require('../../shared/repositories/client')
+import { ClientRepository } from '../../shared/repositories/client.js'
 
-exports.get = async (req, res) => {
+export class SearchAllClientController {
+  async handle(req, res) {
 
-  try {
-    const client = await clientRepository.findAll()
+    try {
 
-    let clientes = []
+      const clientRepository = new ClientRepository()
 
-    client.forEach(client => {
-      return clientes.push(client.dataValues)
-    })
+      const client = await clientRepository.findAll()
 
-    return res.json(clientes)
+      let clientes = []
 
-  } catch (err) {
+      client.forEach(client => {
+        return clientes.push(client.dataValues)
+      })
+
+      return res.json(clientes)
+
+    } catch (err) {
+
+    }
 
   }
-
 }

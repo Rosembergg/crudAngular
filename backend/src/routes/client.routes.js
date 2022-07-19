@@ -1,17 +1,21 @@
-const { Router } = require('express')
+import { Router } from 'express'
 
-const router = Router()
+import { CreateClientController } from '../controllers/Client/CreateClientController.js'
+import { SearchAllClientController } from '../controllers/Client/SearchAllClientController.js'
+import { FindClientController } from '../controllers/Client/FindClientController.js'
+import { DeleteClientController } from '../controllers/Client/DeleteClientController.js'
+import { UpdateClientController } from '../controllers/Client/UpdateClientController.js'
 
-const createClientController = require('../controllers/Client/CreateClientController')
-const searchAllClientController = require('../controllers/Client/SearchAllClientController')
-const findClientController = require('../controllers/Client/FindClientController')
-const deleteClientController = require('../controllers/Client/DeleteClientController')
-const updateClientController = require('../controllers/Client/UpdateClientController')
+export const clientRouter = Router()
 
-router.get('/', searchAllClientController.get)
-router.post('/', createClientController.post)
-router.get('/:id', findClientController.get)
-router.delete('/:id', deleteClientController.delete)
-router.put('/:id', updateClientController.put)
+const createClientController = new CreateClientController()
+const deleteClientController = new DeleteClientController()
+const findClientController = new FindClientController()
+const searchAllClientController = new SearchAllClientController()
+const updateClientController = new UpdateClientController()
 
-module.exports = router
+clientRouter.get('/', searchAllClientController.handle)
+clientRouter.post('/', createClientController.handle)
+clientRouter.get('/:id', findClientController.handle)
+clientRouter.delete('/:id', deleteClientController.handle)
+clientRouter.put('/:id', updateClientController.handle)

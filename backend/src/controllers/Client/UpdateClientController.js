@@ -1,27 +1,30 @@
 'use-strict';
 
-const clientRepository = require('../../shared/repositories/client')
+import { ClientRepository } from '../../shared/repositories/client.js'
 
-exports.put = async (req, res) => {
+export class UpdateClientController {
+  async handle(req, res) {
 
-  try {
+    try {
 
-    const clientUpdateData = req.body
-    const clientID = req.body.id
+      const clientRepository = new ClientRepository()
 
-    const client = await clientRepository.findByID(clientID)
-    
+      const clientUpdateData = req.body
+      const clientID = req.body.id
 
-    if(JSON.stringify(client) == JSON.stringify(clientUpdateData)) return res.status(200).json(clientUpdateData)
-
-    const update = await clientRepository.save(clientUpdateData)
-
-    if(update[0] == 0) return res.status(400).json({ message: 'Não foi possivel atualizar.' })
-
-    return res.json(clientUpdateData)
+      const client = await clientRepository.findByID(clientID)
 
 
-  } catch (err) {
-    console.log(err);
+      if (JSON.stringify(client) == JSON.stringify(clientUpdateData)) return res.status(200).json(clientUpdateData)
+
+      const update = await clientRepository.save(clientUpdateData)
+
+      if (update[0] == 0) return res.status(400).json({ message: 'Não foi possivel atualizar.' })
+
+      return res.json(clientUpdateData)
+
+    } catch (err) {
+      console.log(err);
+    }
   }
 }

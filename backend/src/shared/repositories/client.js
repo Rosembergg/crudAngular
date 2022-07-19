@@ -1,42 +1,45 @@
-const client = require('../models/client')
+import { client } from '../models/client.js'
 
-exports.create = async function (clientData) {
-  return await client.create({
-    ...clientData
-  })
-}
+export class ClientRepository {
 
-exports.findAll = async function () {
-  return await client.findAll()
-}
+  async create(clientData) {
+    return await client.create({
+      ...clientData
+    })
+  }
 
-exports.findByID = async function (id) {
-  const clientData = await client.findOne({
-    where: {
-      id
-    }
-  })
-  if (!clientData) return clientData
-  return clientData.dataValues
-}
+  async findAll() {
+    return await client.findAll()
+  }
 
-exports.deleteByID = async function (id) {
-  return await client.destroy({
-    where: {
-      id
-    }
-  })
-}
+  async findByID(id) {
+    const clientData = await client.findOne({
+      where: {
+        id
+      }
+    })
+    if (!clientData) return clientData
+    return clientData.dataValues
+  }
 
-exports.save = async function (clientData) {
-  const id = clientData.id
+  async deleteByID(id) {
+    return await client.destroy({
+      where: {
+        id
+      }
+    })
+  }
 
-  delete (clientData.id)
-  delete (clientData.createdAt)
-  
-  return await client.update({
-    ...clientData
-  }, {
-    where: { id: id }
-  })
+  async save(clientData) {
+    const id = clientData.id
+
+    delete (clientData.id)
+    delete (clientData.createdAt)
+
+    return await client.update({
+      ...clientData
+    }, {
+      where: { id: id }
+    })
+  }
 }

@@ -1,8 +1,8 @@
-const Sequelize = require('sequelize')
+import Sequelize from 'sequelize'
 
-const database = require('../db/db.config')
+import { database } from '../db/db.config.js'
 
-const Client = database.define('client', {
+export const client = database.define('client', {
   id: {
     type: Sequelize.INTEGER.UNSIGNED,
     autoIncrement: true,
@@ -33,5 +33,3 @@ const Client = database.define('client', {
     allowNull: false
   }
 })
-
-module.exports = Client
