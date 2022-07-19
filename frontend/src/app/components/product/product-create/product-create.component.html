@@ -12,11 +12,10 @@
             class="form-control"
             placeholder="Nome"
             [(ngModel)]="product.nome"
-            fromControlName="nome"
+            name = "nome"
             maxlength="100"
             id="nome"
             required
-            #nome="ngModel"
           />
           <br />
           <label>&nbsp;CEP</label>
