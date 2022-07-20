@@ -17,7 +17,7 @@ export class ProductRead2Component implements AfterViewInit {
   dataSource: ProductRead2DataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ["id", "nome", "rua", "bairro", "complemento", "telefone"];
+  displayedColumns = ["id", "nome", "cep", "endereco", "bairro", "complemento", "cidade", "telefone"];
 
   constructor() {
     this.dataSource = new ProductRead2DataSource();

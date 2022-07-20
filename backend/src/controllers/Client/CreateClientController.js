@@ -8,14 +8,15 @@ export class CreateClientController {
 
       const clientRepository = new ClientRepository()
 
-      const { nome, rua, bairro, complemento, telefone, cep } = req.body
+      const { cep, endereco, bairro, complemento, cidade, nome, telefone } = req.body
 
       const client = await clientRepository.create({
         nome,
-        rua,
+        endereco,
         bairro,
         complemento,
         telefone,
+        cidade,
         cep
       })
 

@@ -13,9 +13,10 @@ export class ProductReadComponent implements OnInit {
     "id",
     "nome",
     "cep",
-    "rua",
+    "endereco",
     "bairro",
     "complemento",
+    "cidade",
     "telefone",
     "action",
   ];

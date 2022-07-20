@@ -1,7 +1,16 @@
 import { Product } from "./../product.model";
-import { Router } from "@angular/router";
+import { Router, ActivatedRoute } from "@angular/router";
 import { ProductService } from "./../product.service";
 import { Component, OnInit } from "@angular/core";
+
+interface IResponseZipCode extends Product {
+  cep: string
+  endereco: string
+  bairro: string
+  cidade: string
+  complemento: string
+  uf: string
+}
 
 @Component({
   selector: "app-product-create",
@@ -12,19 +21,20 @@ export class ProductCreateComponent implements OnInit {
   product: Product = {
     nome: "",
     cep: "",
-    rua: "",
+    endereco: "",
     bairro: "",
     complemento: "",
+    cidade: "",
     telefone: "",
   };
 
   constructor(
-    private productService: ProductService, 
+    private productService: ProductService,
     private router: Router,
-    ) { }
+    private route: ActivatedRoute,
+  ) { }
 
-  ngOnInit(): void { 
-  
+  ngOnInit(): void {
   }
 
   createProduct(): void {
@@ -37,5 +47,11 @@ export class ProductCreateComponent implements OnInit {
   cancel(): void {
     this.router.navigate(["/products"]);
   }
+  getCep() {
+    this.productService.getZipCode(this.product.cep).subscribe((response: any) => this.createForm(response))
+  }
 
+  createForm(response: IResponseZipCode) {
+    this.product = <Product>response;
+  }
 }

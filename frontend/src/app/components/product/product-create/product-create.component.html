@@ -7,87 +7,37 @@
       <form class="formCadastro">
         <div class="form-row">
           <label>&nbsp;Nome</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Nome"
-            [(ngModel)]="product.nome"
-            name = "nome"
-            maxlength="100"
-            id="nome"
-            required
-          />
-          <br />
-          <label>&nbsp;CEP</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="CEP"
-            [(ngModel)]="product.cep"
-            name="cep"
-            maxlength="100"
-            id="CEP"
-            required
-          />
-          <br />
-          <label>&nbsp;Rua</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Rua"
-            [(ngModel)]="product.rua"
-            name="rua"
-            maxlength="100"
-            id="rua"
-            required
-          />
-          <br />
-          <label>&nbsp;Bairro</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Bairro"
-            [(ngModel)]="product.bairro"
-            name="bairro"
-            maxlength="100"
-            id="bairro"
-            required
-          />
-          <br />
-          <label>&nbsp;Complemento</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Complemento"
-            [(ngModel)]="product.complemento"
-            name="complemento"
-            maxlength="100"
-            id="complemento"
-            required
-          />
+          <input type="text" class="form-control" placeholder="Nome" [(ngModel)]="product.nome" name="nome"
+            maxlength="100" id="nome" required />
           <br />
           <label>&nbsp;Telefone</label>
-          <input
-            type="tel"
-            class="form-control"
-            placeholder="Telefone"
-            [(ngModel)]="product.telefone"
-            name="telefone"
-            maxlength="100"
-            id="telefone"
-            required
-          />
+          <input type="tel" class="form-control" placeholder="Telefone" [(ngModel)]="product.telefone" name="telefone"
+            maxlength="100" id="telefone" required />
+          <br />
+          <label>&nbsp;CEP</label>
+          <input type="text" class="form-control" placeholder="CEP" [(ngModel)]="product.cep" name="cep" maxlength="9"
+            id="CEP" (blur)="getCep()" required />
+          <br />
+          <label>&nbsp;Endereço</label>
+          <input type="text" class="form-control" placeholder="Endereço" [(ngModel)]="product.endereco" name="endereco"
+            maxlength="100" id="rua" required />
+          <br />
+          <label>&nbsp;Bairro</label>
+          <input type="text" class="form-control" placeholder="Bairro" [(ngModel)]="product.bairro" name="bairro"
+            maxlength="100" id="bairro" required />
+          <br />
+          <label>&nbsp;Complemento</label>
+          <input type="text" class="form-control" placeholder="Complemento" [(ngModel)]="product.complemento"
+            name="complemento" maxlength="100" id="complemento" required />
+          <br />
+          <label>&nbsp;Cidade</label>
+          <input type="text" class="form-control" placeholder="Cidade" [(ngModel)]="product.cidade" name="cidade"
+            maxlength="100" id="cidade" required />
         </div>
       </form>
     </div>
     <div class="card-footer">
-      <button
-        type="button"
-        class="salvar"
-        mat-raised-button
-        (click)="createProduct()"
-        color="primary"
-      >
+      <button type="button" class="salvar" mat-raised-button (click)="createProduct()" color="primary">
         Salvar
       </button>
       <button class="cancelar" mat-raised-button (click)="cancel()">

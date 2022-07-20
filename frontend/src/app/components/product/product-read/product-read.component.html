@@ -17,16 +17,22 @@
           <td mat-cell *matCellDef="let row">{{ row.nome }}</td>
         </ng-container>
 
-        <!-- Nome Column -->
+        <!-- Telefone Colum -->
+        <ng-container matColumnDef="telefone" class="teste">
+          <th mat-header-cell *matHeaderCellDef>Telefone</th>
+          <td mat-cell *matCellDef="let row">{{ row.telefone }}</td>
+        </ng-container>
+
+        <!-- CEP Column -->
         <ng-container matColumnDef="cep">
           <th mat-header-cell *matHeaderCellDef>CEP</th>
           <td mat-cell *matCellDef="let row">{{ row.cep }}</td>
         </ng-container>
 
-        <!-- Rua Colum -->
-        <ng-container matColumnDef="rua">
-          <th mat-header-cell *matHeaderCellDef>Rua</th>
-          <td mat-cell *matCellDef="let row">{{ row.rua }}</td>
+        <!-- Endereco Colum -->
+        <ng-container matColumnDef="endereco">
+          <th mat-header-cell *matHeaderCellDef>Endereço</th>
+          <td mat-cell *matCellDef="let row">{{ row.endereco }}</td>
         </ng-container>
 
         <!--Bairro Colum -->
@@ -41,10 +47,10 @@
           <td mat-cell *matCellDef="let row">{{ row.complemento }}</td>
         </ng-container>
 
-        <!-- Telefone Colum -->
-        <ng-container matColumnDef="telefone" class="teste">
-          <th mat-header-cell *matHeaderCellDef>Telefone</th>
-          <td mat-cell *matCellDef="let row">{{ row.telefone }}</td>
+        <!-- Cidade Colum -->
+        <ng-container matColumnDef="cidade">
+          <th mat-header-cell *matHeaderCellDef>Cidade</th>
+          <td mat-cell *matCellDef="let row">{{ row.cidade }}</td>
         </ng-container>
 
         <!-- Action Colum -->

@@ -9,7 +9,7 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: Product[] = [
-  { id: 1, nome: 'Hydrogen', cep: 'teste', rua: '9.99', bairro: 'doles', complemento: 'dales', telefone: '1234' },
+  { id: 1, nome: 'Hydrogen', cep: 'teste', endereco: '9.99', bairro: 'doles', complemento: 'dales', cidade: 'teste', telefone: '1234' },
 ];
 
 /**

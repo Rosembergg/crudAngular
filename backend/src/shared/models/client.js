@@ -12,7 +12,11 @@ export const client = database.define('client', {
     type: Sequelize.STRING,
     allowNull: false
   },
-  rua: {
+  endereco: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  cidade: {
     type: Sequelize.STRING,
     allowNull: false
   },

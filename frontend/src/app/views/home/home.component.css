@@ -1,29 +1,33 @@
-.title{
+.title {
     color: black;
     font-size: 2rem;
     font-weight: 400;
     line-height: 1.2;
     margin-left: 29%;
 }
-.subtitle{
+
+.subtitle {
     color: black;
     font-size: 1.1rem;
     font-weight: 390;
     margin-left: 37%;
 }
-.home{
+
+.home {
     background-color: #dcdcdc;
 }
 
-p{
+p {
     font-size: 1.2rem;
 }
+
 .exBtn {
     background-color: #8897ec;
     color: black;
     margin-left: 12rem;
     margin-top: -10px;
 }
-.form-group{
+
+.form-group {
     margin-left: 29%;
 }

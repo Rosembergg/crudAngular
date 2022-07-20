@@ -1,9 +1,11 @@
 export interface Product {
     id?: number
     nome: string
+    telefone: string
     cep: string
-    rua: string
+    endereco: string
     bairro: string
     complemento: string
-    telefone: string
+    cidade: string
+
 }
